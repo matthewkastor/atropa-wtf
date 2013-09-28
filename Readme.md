@@ -7,20 +7,12 @@ JavaScript library for rewording bad poetry.
 The current published version:
 
 ```
-npm install atropa-wtf
-```
-
-The bleeding edge development version:
-
-```
 npm install git+https://github.com/matthewkastor/atropa-wtf.git#master
 ```
 
 For some packages I simply publish to the `gh-pages` branch since it's easier to
  generate web docs in the repo and push the whole thing. Check the repo
  if you try installing the `master` branch and don't get what you expect.
-
-This package lives at: [https://npmjs.org/package/atropa-wtf](https://npmjs.org/package/atropa-wtf)
 
 Source code available at: [https://github.com/matthewkastor/atropa-wtf/](https://github.com/matthewkastor/atropa-wtf/)
 
