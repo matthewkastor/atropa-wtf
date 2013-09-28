@@ -1,0 +1,51 @@
+{
+    "name": "atropa-wtf",
+    "version": "2013.09.27-2334",
+    "description": "JavaScript library for rewording bad poetry.",
+    "main": "./src/atropa-wtf.js",
+    "directories": {
+        "lib": "src",
+        "doc": "docs"
+    },
+    "devDependencies": {
+        "atropa-jsformatter": ">=0.1.2",
+        "atropa-jslint": ">=0.1.2",
+        "browserify": ">=2.29.1",
+        "jasmine-node": ">=1.11.0",
+        "jsdoc-toolkit": "git+https://github.com/matthewkastor/node-jsdoc-toolkit.git#fix-tests"
+    },
+    "scripts": {
+        "test": "jasmine-node specs/",
+        "buildBrowserModule": "node dev/browserify.js",
+        "buildDocs": "jsdoc-toolkit -v -d=./docs/jsdoc/ -r -s src/",
+        "lint": "atropa-jslint ./src/atropa-wtf.js",
+        "srcFormat": "atropa-jsformatter ./src/atropa-wtf.js ./src/atropa-wtf.js"
+    },
+    "homepage": "https://github.com/matthewkastor/atropa-wtf/",
+    "bugs": "https://github.com/matthewkastor/atropa-wtf/issues",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/matthewkastor/atropa-wtf.git"
+    },
+    "keywords": [
+        "atropa-wtf",
+        "atropa"
+    ],
+    "author": {
+        "name": "Matthew Kastor",
+        "email": "matthewkastor@gmail.com",
+        "url": "https://plus.google.com/100898583798552211130"
+    },
+    "licenses": [
+        {
+            "type": "gpl-3.0",
+            "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html"
+        }
+    ],
+    "dependencies": {
+        "atropa-header": "*",
+        "atropa-regex": "*",
+        "atropa-string": "*",
+        "atropa-setAsOptionalArg": "*"
+    }
+}
