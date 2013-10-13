@@ -65,9 +65,14 @@ Of course you need to have the `devDependencies` installed. If they're not
 If you would like to reconfigure the browser module, edit `dev/browserMain.js`
  and then run `npm run-script buildBrowserModule` from the root of this package.
 
+To alter the built in dictionary, edit `src/atropa-wtf.js`
+ and then run `npm run-script buildBrowserModule` from the root of this package.
+ The browser module will be rebuilt and you can try your custom dictionary in
+ the demo at `browser/index.html`
+
 If you alter the source in `src/atropa-wtf.js` please run the
- `srcFormat`, `lint`, and `buildDocs` scripts on it before submitting a pull
- request.
+ `srcFormat`, `lint`, `buildDocs`, and `buildBrowserModule` scripts before
+ submitting a pull request.
 
 ## Author
 
