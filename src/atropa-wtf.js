@@ -1,15 +1,8 @@
-/**
- * Container for all Glorious classes, functions, etc.
- * @author <a href="mailto:matthewkastor@gmail.com">
- *  Matthew Christopher Kastor-Inare III </a><br />
- *  ☭ Hial Atropa!! ☭
- * @namespace Container for all Glorious classes, functions, etc.
- */
+/// <reference path="../../docs/vsdoc/OpenLayersAll.js"/>
 var atropa = require('atropa-header');
 atropa.regex = require('atropa-regex').regex;
 atropa.string = require('atropa-string').string;
 atropa.setAsOptionalArg = require('atropa-setAsOptionalArg').setAsOptionalArg;
-/// <reference path="../../docs/vsdoc/OpenLayersAll.js"/>
 /*jslint
     indent: 4,
     maxerr: 50,

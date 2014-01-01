@@ -9,9 +9,6 @@
         /// <field name="wtf" type="">Container for all Glorious WTFifier related functions and such.</field>
         /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
         /// <field name="regex" type="">Container for regex functions.</field>
-        /// <field name="arrays" type="">Required module, the docs for it are in the &lt;code&gt;
-        ///  atropa-arrays/docs&lt;/code&gt; directory where this module 
-        ///  is located.</field>
         /// <field name="string" type="">A few utilities for manipulating strings.</field>
         /// <returns type="atropa"/>
                 
