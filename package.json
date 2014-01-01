@@ -1,6 +1,6 @@
 {
   "name": "atropa-wtf",
-  "version": "2013.10.20",
+  "version": "2014.1.1",
   "description": "JavaScript library for rewording bad poetry.",
   "main": "./src/atropa-wtf.js",
   "directories": {
