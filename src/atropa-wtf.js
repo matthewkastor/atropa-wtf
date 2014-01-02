@@ -64,7 +64,6 @@ atropa.setAsOptionalArg = require('atropa-setAsOptionalArg').setAsOptionalArg;
  *  ☭ Hial Atropa!! ☭
  * @version 20120909
  * @namespace Container for all Glorious WTFifier related functions and such.
- * @see <a href="../../../AtropaToolboxTests.html?spec=atropa.wtf">tests</a>
  * @requires atropa.regex
  * @requires atropa.wtf.dictionary
  */
