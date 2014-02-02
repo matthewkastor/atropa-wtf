@@ -69,7 +69,15 @@ atropa.setAsOptionalArg = require('atropa-setAsOptionalArg').setAsOptionalArg;
  * @requires atropa.wtf.dictionary
  */
 atropa.wtf = {};
-atropa.wtf.dictionary = require('./atropa-wtf-dictionary.js');
+/**
+ * The Glorious WTFification Dictionary: Turning Shit
+ * Into Polished Turds.
+ * @author <a href="mailto:matthewkastor@gmail.com">
+ *  Matthew Christopher Kastor-Inare III </a><br />
+ *  ☭ Hial Atropa!! ☭
+ * @version 20130110
+ */
+atropa.wtf.dictionary = require('./atropa-wtf-dictionary.json');
 /**
  * Accepts plain text input and Gloriously WTFifies it.
  * @author <a href="mailto:matthewkastor@gmail.com">
