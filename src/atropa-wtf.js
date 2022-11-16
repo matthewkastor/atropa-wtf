@@ -19,45 +19,33 @@ atropa.setAsOptionalArg = require('atropa-setAsOptionalArg').setAsOptionalArg;
 /*global atropa */
 // end header
 (function () {
-    "use strict";
-    atropa.requires(
-        'wtf',
-        function () {
-            var supported = true;
-            
-            [
-                atropa.regex,
-                atropa.string.countWords,
-                atropa.setAsOptionalArg
-            ].forEach(function (prerequisite) {
-                if(prerequisite === undefined) {
-                    supported = false;
-                }
-            });
-            return supported;
-        }
-    );
+    'use strict';
+    atropa.requires('wtf', function () {
+        var supported = true;
+        [
+            atropa.regex,
+            atropa.string.countWords,
+            atropa.setAsOptionalArg
+        ].forEach(function (prerequisite) {
+            if (prerequisite === undefined) {
+                supported = false;
+            }
+        });
+        return supported;
+    });
 }());
-
 (function () {
-    "use strict";
-    atropa.requires(
-        'wtfHtmlElement',
-        function () {
-            var supported = true;
-            
-            [
-                window
-            ].forEach(function (prerequisite) {
-                if(prerequisite === undefined) {
-                    supported = false;
-                }
-            });
-            return supported;
-        }
-    );
+    'use strict';
+    atropa.requires('wtfHtmlElement', function () {
+        var supported = true;
+        [window].forEach(function (prerequisite) {
+            if (prerequisite === undefined) {
+                supported = false;
+            }
+        });
+        return supported;
+    });
 }());
-
 /**
  * Container for all Glorious WTFifier related functions and such.
  * @author <a href="mailto:matthewkastor@gmail.com">
@@ -91,30 +79,19 @@ atropa.wtf.dictionary = require('./atropa-wtf-dictionary.json');
  * @return {String} Returns Genuine WTFified text.
  */
 atropa.wtf.wtfify = function (target, outputHTML) {
-    "use strict";
+    'use strict';
     atropa.supportCheck('wtf');
-    
-    var regexValue,
-        replacementText,
-        oldWord,
-        wtfCount,
-        wordCount,
-        ret,
-        word;
-    
-    if(true !== outputHTML) {
+    var regexValue, replacementText, oldWord, wtfCount, wordCount, ret, word;
+    if (true !== outputHTML) {
         outputHTML = false;
     }
     ret = {};
     wtfCount = 0;
     target = target.trim();
     wordCount = atropa.string.countWords(target);
-    if(true === outputHTML) {
-        target = target.replace(
-            /(\. ?){2,}/gi,
-            '<span style="color : brown ;"> [shit taco] </span>'
-        );
-        target = '<p> ' + target.replace(/(\r\n|\r|\n)/g,' <br/> ') + ' </p>';
+    if (true === outputHTML) {
+        target = target.replace(/(\. ?){2,}/gi, '<span style="color : brown ;"> [shit taco] </span>');
+        target = '<p> ' + target.replace(/(\r\n|\r|\n)/g, ' <br/> ') + ' </p>';
     } else {
         target = target.replace(/(\. ?){2,}/gi, ' [shit taco] ');
     }
@@ -130,16 +107,14 @@ atropa.wtf.wtfify = function (target, outputHTML) {
      * @param {String} sub1 First matched subpattern in string searched.
      * @param {String} sub2 Second matched subpattern in string searched.
      */
-     /*jslint unparam: true*/
+    /*jslint unparam: true*/
     replacementText = function (m, sub1, sub2) {
         wtfCount++;
         sub1 = atropa.setAsOptionalArg('', sub1);
         sub2 = atropa.setAsOptionalArg('', sub2);
         var out;
-        if(true === outputHTML) {
-            out = '<span style="color : red ;">' +
-                sub1 + atropa.wtf.dictionary[word] + sub2 +
-                '</span>';
+        if (true === outputHTML) {
+            out = '<span style="color : red ;">' + sub1 + atropa.wtf.dictionary[word] + sub2 + '</span>';
         } else {
             out = sub1 + atropa.wtf.dictionary[word] + sub2;
         }
@@ -170,25 +145,16 @@ atropa.wtf.wtfify = function (target, outputHTML) {
  * @version 20130313
  */
 atropa.wtf.htmlElement = function (elementReference) {
-    "use strict";
+    'use strict';
     atropa.supportCheck('wtfHtmlElement');
-    
     var wtfified, txt;
-    elementReference.innerHTML = elementReference.innerHTML.replace(
-        /<br>(\s+)?(\r\n|\r|\n)?/g, '\r\n');
+    elementReference.innerHTML = elementReference.innerHTML.replace(/<br>(\s+)?(\r\n|\r|\n)?/g, '\r\n');
     txt = elementReference.value || elementReference.textContent;
     wtfified = atropa.wtf.wtfify(txt, true);
-    elementReference.innerHTML =
-        '<pre style="color:black; background:white; white-space:pre-wrap;">' +
-        wtfified.txt +
-        '</pre>';
+    elementReference.innerHTML = '<pre style="color:black; background:white; white-space:pre-wrap;">' + wtfified.txt + '</pre>';
     return elementReference;
 };
-
-
-
-
-while(atropa.data.requirements.length > 0) {
+while (atropa.data.requirements.length > 0) {
     atropa.data.requirements.pop()();
 }
 module.exports = atropa;
