@@ -25,12 +25,20 @@
     
 
     window.atropa = {
-        /// <summary></summary>
-        /// <field name="wtf" type="">Container for all Glorious WTFifier related functions and such.</field>
-        /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
-        /// <field name="regex" type="">Container for regex functions.</field>
-        /// <field name="string" type="">A few utilities for manipulating strings.</field>
+        /// <summary>Container for all Glorious classes, functions, etc.</summary>
         /// <returns type="atropa"/>
+      
+        /// <field name="wtf" type="">Container for all Glorious WTFifier related functions and such.</field>
+        wtf : {}, 
+      
+        /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
+        data : {}, 
+      
+        /// <field name="regex" type="">Container for regex functions.</field>
+        regex : {}, 
+      
+        /// <field name="string" type="">A few utilities for manipulating strings.</field>
+        string : {}, 
                 
         supportCheck: function(className, errorMessage) {
             /// <summary>Checks whether this class has been marked as unsupported and throws an 
@@ -80,7 +88,7 @@
     window.atropa = window.atropa || {};
 
     window.atropa.data = {
-        /// <summary></summary>
+        /// <summary>Container for gobal data related to the classes and functions.</summary>
         /// <returns type="atropa.data"/>
                 
     };
@@ -99,9 +107,11 @@
     window.atropa = window.atropa || {};
 
     window.atropa.regex = {
-        /// <summary></summary>
-        /// <field name="patterns" type="">Regex patterns.</field>
+        /// <summary>Container for regex functions.</summary>
         /// <returns type="atropa.regex"/>
+      
+        /// <field name="patterns" type="">Regex patterns</field>
+        patterns : {}, 
                 
         appendPrefixesAndSuffixes: function(word, threshold) {
             /// <summary>Appends common prefix, suffix, and word boundary regex strings to
@@ -132,11 +142,17 @@
     window.atropa.regex = window.atropa.regex || {};
 
     window.atropa.regex.patterns = {
-        /// <summary></summary>
-        /// <field name="repeatedWords" type="">finds repeated words and phrases</field>
-        /// <field name="paragraphBreaks" type="">finds paragraph breaks</field>
-        /// <field name="lineBreaks" type="">finds line breaks</field>
+        /// <summary>Regex patterns</summary>
         /// <returns type="atropa.regex.patterns"/>
+      
+        /// <field name="repeatedWords" type="RegExp">finds repeated words and phrases</field>
+        repeatedWords : new RegExp(), 
+      
+        /// <field name="paragraphBreaks" type="RegExp">finds paragraph breaks</field>
+        paragraphBreaks : new RegExp(), 
+      
+        /// <field name="lineBreaks" type="RegExp">finds line breaks</field>
+        lineBreaks : new RegExp()
                 
     };
 
@@ -154,7 +170,7 @@
     window.atropa = window.atropa || {};
 
     window.atropa.string = {
-        /// <summary></summary>
+        /// <summary>A few utilities for manipulating strings.</summary>
         /// <returns type="atropa.string"/>
                 
         removeRepeatedWord: function(string) {
@@ -273,10 +289,12 @@
     window.atropa = window.atropa || {};
 
     window.atropa.wtf = {
-        /// <summary></summary>
+        /// <summary>Container for all Glorious WTFifier related functions and such.</summary>
+        /// <returns type="atropa.wtf"/>
+      
         /// <field name="dictionary" type="">The Glorious WTFification Dictionary: Turning Shit
         /// Into Polished Turds.</field>
-        /// <returns type="atropa.wtf"/>
+        dictionary : {}, 
                 
         wtfify: function(target, outputHTML) {
             /// <summary>Accepts plain text input and Gloriously WTFifies it.</summary>

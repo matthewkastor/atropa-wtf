@@ -5,12 +5,20 @@
     
 
     window.atropa = {
-        /// <summary></summary>
-        /// <field name="wtf" type="">Container for all Glorious WTFifier related functions and such.</field>
-        /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
-        /// <field name="regex" type="">Container for regex functions.</field>
-        /// <field name="string" type="">A few utilities for manipulating strings.</field>
+        /// <summary>Container for all Glorious classes, functions, etc.</summary>
         /// <returns type="atropa"/>
+      
+        /// <field name="wtf" type="">Container for all Glorious WTFifier related functions and such.</field>
+        wtf : {}, 
+      
+        /// <field name="data" type="">Container for gobal data related to the classes and functions.</field>
+        data : {}, 
+      
+        /// <field name="regex" type="">Container for regex functions.</field>
+        regex : {}, 
+      
+        /// <field name="string" type="">A few utilities for manipulating strings.</field>
+        string : {}, 
                 
         supportCheck: function(className, errorMessage) {
             /// <summary>Checks whether this class has been marked as unsupported and throws an 
